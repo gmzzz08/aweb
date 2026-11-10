@@ -1,0 +1,79 @@
+/*
+Daniel Alonso Gómez
+Noviembre 2026
+Carrusel de imágenes
+*/
+
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-size: 1.6rem;
+    padding: 2em;
+    color: white;
+    background: linear-gradient(to right, rgb(8, 8, 8) 0%, rgb(62, 65, 62) 50%, rgb(34, 34, 31) 75%, rgb(0, 0, 0) 100%)
+}
+
+section{
+    display: flex;
+    height: 300px;
+}
+
+section img{
+    width: 0px;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: 0.8;
+    transition: 4s ease;
+}
+
+section img:first-child{
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+section img:last-child{
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+section img:hover{
+    width: 300px;
+    opacity: 1;
+    filter: contrast(120%);
+}
+
+@font-face {
+    font-family: "Squid";
+    src: url(./fuentes/Game\ Of\ Squids.ttf);
+}
+
+@font-face {
+    font-family: "minecraft";
+    src: url(./fuentes/Minecraft.ttf);
+}
+
+h1{
+    font-family: Squid;
+    text-align: center;
+}
+
+p{
+    text-align: justify;
+    font-family: minecraft;
+    margin: 1rem auto 1rem auto;
+}
+
+html, body, header, footer{ cursor: url('./img/strawhat.cur'), auto;}
+
+
+.leyenda{
+    text-align: center;
+}
